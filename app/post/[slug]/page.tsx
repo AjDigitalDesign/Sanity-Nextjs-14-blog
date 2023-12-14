@@ -6,6 +6,7 @@ import Image from "next/image";
 import React from "react";
 
 async function getData(slug: string) {
+  // await new Promise((resolve) => setTimeout(resolve, 3000));
   const query = `*[_type == "post" && slug.current == "${slug}"][0]`;
 
   const data = await client.fetch(query, { next: { revalidate: 60 } });

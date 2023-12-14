@@ -2,8 +2,10 @@ import Image from "next/image";
 import { client } from "./lib/sanity";
 import { Post } from "./lib/interface";
 import Link from "next/link";
+import { resolve } from "path";
 
 async function getData() {
+  // await new Promise((resolve) => setTimeout(resolve, 3000));
   const query = `*[_type == 'post']`;
 
   const data = await client.fetch(query, { next: { revalidate: 60 } });
@@ -11,7 +13,6 @@ async function getData() {
   return data;
 }
 
-export const revalidate = 60; // revalidate this page every 60 seconds
 export default async function Home() {
   const data = (await getData()) as Post[];
 
