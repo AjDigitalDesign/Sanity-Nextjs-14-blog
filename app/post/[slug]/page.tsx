@@ -13,6 +13,8 @@ async function getData(slug: string) {
   return data;
 }
 
+export const revalidate = 60; // revalidate this page every 60 seconds
+
 async function SlugPage({ params }: { params: { slug: string } }) {
   const data = (await getData(params.slug)) as Post;
 
