@@ -12,6 +12,7 @@
     "@heroicons/react": "^2.0.18",
     "@portabletext/react": "^3.0.11",
     "@sanity/image-url": "^1.0.2",
+    "groq": "^3.21.3",
     "i": "^0.3.7",
     "next": "14.0.4",
     "next-sanity": "^7.0.4",
