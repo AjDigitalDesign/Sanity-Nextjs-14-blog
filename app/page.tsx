@@ -8,7 +8,7 @@ async function getData() {
   // await new Promise((resolve) => setTimeout(resolve, 3000));
   const query = `*[_type == 'post']`;
 
-  const data = await client.fetch(query, { next: { revalidate: 60 } });
+  const data = await client.fetch(query, { next: { revalidate: 10 } });
 
   return data;
 }

@@ -9,7 +9,7 @@ async function getData(slug: string) {
   // await new Promise((resolve) => setTimeout(resolve, 3000));
   const query = `*[_type == "post" && slug.current == "${slug}"][0]`;
 
-  const data = await client.fetch(query, { next: { revalidate: 60 } });
+  const data = await client.fetch(query, { next: { revalidate: 10 } });
 
   return data;
 }
@@ -55,19 +55,22 @@ async function SlugPage({ params }: { params: { slug: string } }) {
       </header>
 
       <div>
-        <Image
-          src={urlFor(featuredImage).url()}
-          placeholder="blur"
-          blurDataURL={urlFor(featuredImage)
-            .width(24)
-            .height(24)
-            .blur(10)
-            .url()}
-          alt="image"
-          className="rounded-lg"
-          width={800}
-          height={400}
-        />
+        if (featuredImage){" "}
+        {
+          <Image
+            src={urlFor(featuredImage).url()}
+            placeholder="blur"
+            blurDataURL={urlFor(featuredImage)
+              .width(24)
+              .height(24)
+              .blur(10)
+              .url()}
+            alt="image"
+            className="rounded-lg"
+            width={800}
+            height={400}
+          />
+        }
       </div>
 
       <div className="divide-y divide-gray-200 pb-7 dark:divide-gray-700 xl:divide-y-0">
