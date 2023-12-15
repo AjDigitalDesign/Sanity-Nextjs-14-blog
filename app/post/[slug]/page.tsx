@@ -54,9 +54,8 @@ async function SlugPage({ params }: { params: { slug: string } }) {
         </div>
       </header>
 
-      <div>
-        if (featuredImage){" "}
-        {
+      {featuredImage === featuredImage ? (
+        <div>
           <Image
             src={urlFor(featuredImage).url()}
             placeholder="blur"
@@ -70,8 +69,10 @@ async function SlugPage({ params }: { params: { slug: string } }) {
             width={800}
             height={400}
           />
-        }
-      </div>
+        </div>
+      ) : (
+        ""
+      )}
 
       <div className="divide-y divide-gray-200 pb-7 dark:divide-gray-700 xl:divide-y-0">
         <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
