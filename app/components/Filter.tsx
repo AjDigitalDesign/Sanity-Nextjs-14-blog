@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { FC, useEffect, useState } from "react";
 import DropDown from "./DropDown";
 
-import { Post } from "../lib/interface";
+import { Category, Post } from "../lib/interface";
 
 interface filterProps {
   posts: Post[];
