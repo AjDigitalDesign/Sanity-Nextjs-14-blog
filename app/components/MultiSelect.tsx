@@ -4,7 +4,6 @@ import ThemeButton from "./ThemeButton";
 import MultiSelectDropdown from "./MultiSelectDropdown";
 import Link from "next/link";
 import { Category, Post } from "../lib/interface";
-import category from "@/studio/schemas/category";
 
 interface MultiSelectProps {
   posts: Post[];
