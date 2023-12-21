@@ -14,7 +14,7 @@ const MultiSelect: FC<MultiSelectProps> = ({ posts, categories }) => {
   const [selectedOptions, setSelectedOptions] = useState<Post[]>(posts);
 
   const handleSelect = (options: string[]) => {
-    setSelectedOptions(options);
+    // setSelectedOptions(options);
   };
 
   return (
