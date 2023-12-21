@@ -15,11 +15,11 @@ const PostCategoryFilter: FC<PostCategoryFilterProps> = ({
   onCategoryChange,
 }) => {
   return (
-    <div className="mt-5">
-      <h3>Filter by Category:</h3>
-      <div className="flex justify-between mt-3">
+    <div className="mt-5  ">
+      <h3 className="pt-3">Filter by Category:</h3>
+      <div className="flex justify-between mt-3 border-y-2 border-t-white">
         {categories.map((category) => (
-          <div className="flex items-center mb-4" key={category}>
+          <div className="flex items-center mb-4 pt-3" key={category}>
             <input
               id="default-checkbox"
               type="checkbox"
