@@ -1,4 +1,7 @@
 export interface Post {
+  category: {
+    title: string;
+  };
   title: string;
   overview: string;
   content: any;
@@ -12,4 +15,12 @@ export interface Post {
     current: string;
   };
   _createdAt: string;
+}
+
+export interface Category {
+  title: string;
+}
+
+export interface categories {
+  title: string;
 }
